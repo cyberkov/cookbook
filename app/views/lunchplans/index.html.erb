@@ -1,0 +1,27 @@
+<h1>Listing lunchplans</h1>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Recipe</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lunchplans.each do |lunchplan| %>
+  <tr>
+    <td><%= lunchplan.day %></td>
+    <td><%= lunchplan.recipe_id %></td>
+    <td><%= lunchplan.notes %></td>
+    <td><%= link_to 'Show', lunchplan %></td>
+    <td><%= link_to 'Edit', edit_lunchplan_path(lunchplan) %></td>
+    <td><%= link_to 'Destroy', lunchplan, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lunchplan', new_lunchplan_path %>

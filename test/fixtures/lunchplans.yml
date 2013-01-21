@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  day: 2013-01-20
+  recipe_id: 1
+  notes: MyText
+
+two:
+  day: 2013-01-20
+  recipe_id: 1
+  notes: MyText

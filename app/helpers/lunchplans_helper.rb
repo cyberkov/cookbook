@@ -1,0 +1,2 @@
+module LunchplansHelper
+end
