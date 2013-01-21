@@ -6,6 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pry-rails', :group => :development
 
 gem 'json'
 
@@ -16,18 +17,20 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', '=0.10', :platforms => :ruby
-  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-  gem "twitter-bootstrap-rails"
+  gem 'libv8', '~> 3.3.10'
+  gem 'therubyracer', '=0.10', :platforms => :ruby, :require => 'v8'
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'less-rails'
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
 
-gem 'tabulous'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'nested_form'
+gem 'tabulous'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 #gem 'ruby-progressbar', :require => false
@@ -43,7 +46,6 @@ gem 'bootstrap-will_paginate'
 
 # Deploy with Capistrano
 gem 'capistrano'
-gem 'pry-rails', :group => :development
 
 # To use debugger
 # gem 'ruby-debug'
