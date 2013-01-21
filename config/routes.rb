@@ -1,4 +1,7 @@
 Cookbook::Application.routes.draw do
+  resources :units
+
+
   resources :tags
 
 
