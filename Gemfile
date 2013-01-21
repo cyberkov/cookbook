@@ -49,3 +49,9 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug'
+
+gem 'rspec-rails', :group => [:test, :development]
+group :test do
+	gem 'capybara'           # user testing
+	gem 'guard-rspec'
+end
