@@ -5,8 +5,6 @@ class CreateIngredientsRecipes < ActiveRecord::Migration
       t.integer :recipe_id
       t.float :amount
       t.integer :unit_id
-
-      t.timestamps
     end
   end
 end

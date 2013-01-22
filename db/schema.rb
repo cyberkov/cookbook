@@ -19,12 +19,10 @@ ActiveRecord::Schema.define(:version => 20130121205703) do
   end
 
   create_table "ingredients_recipes", :force => true do |t|
-    t.integer  "ingredient_id"
-    t.integer  "recipe_id"
-    t.float    "amount"
-    t.integer  "unit_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer "ingredient_id"
+    t.integer "recipe_id"
+    t.float   "amount"
+    t.integer "unit_id"
   end
 
   create_table "lunchplans", :force => true do |t|

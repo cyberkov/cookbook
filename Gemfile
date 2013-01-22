@@ -50,8 +50,12 @@ gem 'capistrano'
 # To use debugger
 # gem 'ruby-debug'
 
+group :development do
+	gem 'rb-inotify', '~> 0.8.8'
+	gem 'guard-rspec'
+end
+
 gem 'rspec-rails', :group => [:test, :development]
 group :test do
 	gem 'capybara'           # user testing
-	gem 'guard-rspec'
 end

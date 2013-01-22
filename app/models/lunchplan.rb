@@ -1,4 +1,4 @@
 class Lunchplan < ActiveRecord::Base
-  has_one :recipe
+  belongs_to :recipes
   attr_accessible :day, :notes, :recipe_id
 end
