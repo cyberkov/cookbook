@@ -8,9 +8,6 @@ Cookbook::Application.routes.draw do
   resources :lunchplans
 
 
-  resources :ingredients
-
-
   resources :recipes
 
 
