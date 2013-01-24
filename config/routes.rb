@@ -1,4 +1,10 @@
 Cookbook::Application.routes.draw do
+  resources :ingredients
+
+
+  resources :foods
+
+
   resources :units
 
 
