@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20130121205703) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "ingredients_recipes", :force => true do |t|
+  create_table "ingredients_recipes", :id => false, :force => true do |t|
     t.integer "ingredient_id"
     t.integer "recipe_id"
     t.float   "amount"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20130121205703) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "recipes_tags", :force => true do |t|
+  create_table "recipes_tags", :id => false, :force => true do |t|
     t.integer "recipe_id"
     t.integer "tag_id"
   end
