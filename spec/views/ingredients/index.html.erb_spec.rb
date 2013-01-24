@@ -7,13 +7,15 @@ describe "ingredients/index" do
         :amount => 1.5,
         :unit_id => 1,
         :food_id => 2,
-        :recipe_id => 3
+        :recipe_id => 3,
+		:created_at => 1.days.ago
       ),
       stub_model(Ingredient,
         :amount => 1.5,
         :unit_id => 1,
         :food_id => 2,
-        :recipe_id => 3
+        :recipe_id => 3,
+		:created_at => 1.days.ago
       )
     ])
   end

@@ -4,10 +4,12 @@ describe "foods/index" do
   before(:each) do
     assign(:foods, [
       stub_model(Food,
-        :name => "Name"
+        :name => "Name",
+		:created_at => 1.days.ago
       ),
       stub_model(Food,
-        :name => "Name"
+        :name => "Name",
+		:created_at => 1.days.ago
       )
     ])
   end
