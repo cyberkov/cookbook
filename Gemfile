@@ -58,4 +58,5 @@ end
 gem 'rspec-rails', :group => [:test, :development]
 group :test do
 	gem 'capybara'           # user testing
+	gem 'factory_girl_rails'
 end
