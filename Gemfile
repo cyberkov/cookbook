@@ -51,8 +51,9 @@ gem 'capistrano'
 # gem 'ruby-debug'
 
 group :development do
-	gem 'rb-inotify', '~> 0.8.8'
+	gem 'rb-inotify', '~> 0.8.8', :require => false
 	gem 'guard-rspec'
+	gem 'guard-bundler'
 end
 
 gem 'rspec-rails', :group => [:test, :development]
