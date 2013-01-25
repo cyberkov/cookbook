@@ -54,6 +54,8 @@ group :development do
 	gem 'rb-inotify', '~> 0.8.8', :require => false
 	gem 'guard-rspec'
 	gem 'guard-bundler'
+	gem 'rails_best_practices'
+	gem 'guard-rails_best_practices'
 end
 
 gem 'rspec-rails', :group => [:test, :development]
