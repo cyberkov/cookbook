@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  has_many :ingredients
+  has_many :ingredients, :dependent => :destroy
   has_many :foods, :through => :ingredients
   has_many :tags
   has_many :lunchplans
