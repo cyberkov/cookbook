@@ -1,5 +1,5 @@
 class Food < ActiveRecord::Base
-  has_many :ingredients
+  has_many :ingredients, :dependent => :restrict
   has_many :recipes, :through => :ingredients
   attr_accessible :name
 
