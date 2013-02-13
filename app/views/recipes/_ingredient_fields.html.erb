@@ -1,0 +1,10 @@
+  <div class="control-group">
+    <%= f.label :amount, :class => 'control-label' %>
+    <div class="controls">
+			<%= f.text_field :amount, :class => 'text_field input-mini' %>
+			<%= f.collection_select :unit_id, Unit.all, :id, :name  %>
+			<%= f.collection_select :food_id, Food.all, :id, :name, :class => 'select_field' %>
+			<%= f.link_to_remove "remove" %>
+    </div>
+  </div>
+

@@ -1,19 +1,38 @@
-<%= semantic_bootstrap_nested_form_for @recipe, :html => { :class => 'form-horizontal' } do |f| %>
-		<%= f.inputs do %>
-				<%= f.input :name %>
-				<%= f.semantic_fields_for :ingredients do %>
-					<%= f.inputs do %>
-						<%= f.input :name %>
-						<%= f.link_to_remove "Remove" %>
-					<% end %>
-				<% end %>
-				<%= f.link_to_add "add ingredient", :ingredients %>
-				<%= f.input :description, :input_html => { :class => 'autogrow', :rows => 15, :cols => 50 } %>
-				<%= f.input :persons %>
-				<%= f.input :preparation_time %>
-		<% end %>
-		<%= f.actions do %>
-			<%= f.action :submit %>
-			<%= f.action :cancel %>
-		<% end %>
+<%= nested_form_for @recipe, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :persons, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :persons, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :preparation_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :preparation_time, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+			<%= f.fields_for :ingredients %>
+			<%= f.link_to_add "Add a ingredient", :ingredients %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                recipes_path, :class => 'btn' %>
+  </div>
 <% end %>
