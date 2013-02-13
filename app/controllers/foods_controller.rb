@@ -2,7 +2,11 @@ class FoodsController < ApplicationController
   # GET /foods
   # GET /foods.json
   def index
-    @foods = Food.all
+    if params[:term].present?
+      @foods = Food.order(:name).where("name like ?", "%#{params[:term]}%")
+	else
+	  @foods = Food.all
+	end
 
     respond_to do |format|
       format.html # index.html.erb
