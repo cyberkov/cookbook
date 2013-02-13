@@ -1,10 +1,5 @@
-  <div class="control-group">
-    <%= f.label :amount, :class => 'control-label' %>
-    <div class="controls">
-			<%= f.text_field :amount, :class => 'text_field input-mini' %>
-			<%= f.collection_select :unit_id, Unit.all, :id, :name  %>
-			<%= f.collection_select :food_id, Food.all, :id, :name, :class => 'select_field' %>
-			<%= f.link_to_remove "remove" %>
-    </div>
-  </div>
+		<%= f.text_field :amount, :class => 'text_field input-mini', :placeholder => "10" %>
+		<%= f.text_field :unit_name, data: {autocomplete_source: Unit.order(:name).map(&:name)}, :placeholder => "Gramm" %>
+		<%= f.text_field :food_name, data: {autocomplete_source: foods_path(:format => :json)}, :placeholder => "Sugar" %>
+		<%= f.link_to_remove "remove" %>
 
