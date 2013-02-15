@@ -3,6 +3,8 @@ class LunchplansController < ApplicationController
   # GET /lunchplans.json
   def index
     @lunchplans = Lunchplan.all
+	@lunchplans_by_date = @lunchplans.group_by(&:day)
+	@date = params[:date] ? Date.parse(params[:date]) : Date.today
 
     respond_to do |format|
       format.html # index.html.erb
