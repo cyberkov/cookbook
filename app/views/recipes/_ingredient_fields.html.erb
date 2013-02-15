@@ -1,5 +1,5 @@
 		<%= f.text_field :amount, :class => 'text_field input-mini', :placeholder => "10" %>
-		<%= f.text_field :unit_name, data: {autocomplete_source: Unit.order(:name).map(&:name)}, :placeholder => "Gramm" %>
-		<%= f.text_field :food_name, data: {autocomplete_source: foods_path(:format => :json)}, :placeholder => "Sugar" %>
+		<%= f.autocomplete_field :unit_name, autocomplete_unit_name_ingredients_path, :placeholder => "Gramm" %>
+		<%= f.autocomplete_field :food_name, autocomplete_food_name_ingredients_path, :placeholder => "Sugar" %>
 		<%= f.link_to_remove "remove" %>
 
