@@ -1,4 +1,5 @@
 class LunchplansController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /lunchplans
   # GET /lunchplans.json
   def index

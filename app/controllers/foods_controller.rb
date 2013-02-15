@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /foods
   # GET /foods.json
   def index

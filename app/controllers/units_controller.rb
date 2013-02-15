@@ -1,4 +1,5 @@
 class UnitsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /units
   # GET /units.json
   def index

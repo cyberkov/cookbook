@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   autocomplete :food, :name
   autocomplete :unit, :name
   # GET /ingredients
