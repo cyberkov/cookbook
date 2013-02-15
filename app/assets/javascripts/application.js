@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery-migrate-min
 //= require jquery.ui.all
+//= require jquery.ui.datepicker
+//= require jquery.ui.datepicker-de
 // require jquery_ujs
 //= require autocomplete-rails
 //= require twitter/bootstrap
