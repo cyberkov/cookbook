@@ -1,4 +1,6 @@
 Cookbook::Application.routes.draw do
+  devise_for :users
+
   resources :ingredients do
 	  get :autocomplete_food_name, :on => :collection
 	  get :autocomplete_unit_name, :on => :collection

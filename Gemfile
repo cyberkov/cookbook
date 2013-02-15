@@ -37,6 +37,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'rails3-jquery-autocomplete'
 #gem 'ruby-progressbar', :require => false
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
