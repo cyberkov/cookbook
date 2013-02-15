@@ -8,13 +8,13 @@
   <div class="control-group">
     <%= f.label :unit_name, :class => 'control-label' %>
     <div class="controls">
-		<%= f.text_field :unit_name, data: {autocomplete_source: Unit.order(:name).map(&:name)} %>
+		<%= f.autocomplete_field :unit_name, autocomplete_unit_name_ingredients_path %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :food_name, :class => 'control-label' %>
     <div class="controls">
-			<%= f.text_field :food_name, data: {autocomplete_source: foods_path(:format => :json)} %>
+		<%= f.autocomplete_field :food_name, autocomplete_food_name_ingredients_path %>
     </div>
   </div>
   <div class="control-group">

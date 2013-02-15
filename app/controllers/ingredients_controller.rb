@@ -1,4 +1,6 @@
 class IngredientsController < ApplicationController
+  autocomplete :food, :name
+  autocomplete :unit, :name
   # GET /ingredients
   # GET /ingredients.json
   def index

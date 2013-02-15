@@ -26,6 +26,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-migrate-rails'
 
 gem 'formtastic'
 gem 'formtastic-bootstrap'
@@ -33,6 +35,7 @@ gem 'nested_form'
 gem 'tabulous'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
+gem 'rails3-jquery-autocomplete'
 #gem 'ruby-progressbar', :require => false
 
 # To use ActiveModel has_secure_password
